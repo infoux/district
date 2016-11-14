@@ -42,20 +42,38 @@ body {
 .mgt90{margin-top:90px !important;}
 
 /* detailPopup */
-section#detailPopup{position:fixed;top:0;right:0;left:0;display:block;width:100%;height:100%;z-index:100;}
+section#detailPopup{position:fixed;top:0;right:0;left:0;display:none;width:100%;height:100%;z-index:100;}
 section#detailPopup div.detailInner{position:absolute;top:calc(50% - 220px);display:block;width:90%;margin-left:5%;background:#fff;border:1px solid #eaeaea;}
 section#detailPopup div.detailInner h2{display:block;width:100%;height:53px;padding:15px 0 20px;font-size:13px;color:#333;font-weight:600;}
 section#detailPopup div.detailInner h2 small{display:block;font-size:11px;font-weight:normal;color:#999;margin-top:5px;font-weight:normal;}
 section#detailPopup div.detailInner div.visualArea{position:relative;width:100%;height:207px;border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea;background:url('../images/test01.png') no-repeat center top / 100%;}
 section#detailPopup div.detailInner div.visualArea p.favorite{position:absolute;bottom:10px;right:10px;font-size:11px;color:#fff;}
 section#detailPopup div.detailInner div.visualArea p.favorite a{display:inline-block;width:15px;height:14px;line-height:14px;background:url('../images/favorite.png') no-repeat center;background-size:15px 14px;text-indent:-9999px;margin-left:10px;}
-section#detailPopup div.detailInner div.use{display:block;width:100%;height:145px;padding:20px;text-align:left;}
+section#detailPopup div.detailInner div.use{display:block;width:100%;padding:20px;text-align:left;}
 section#detailPopup div.detailInner div.use h4{font-size:13px;font-weight:600;color:#5a92e9;margin-bottom:10px;}
 section#detailPopup div.detailInner div.use p{display:inline-block;width:100%;font-size:10px;font-weight:600;color:#333;margin-bottom:10px;}
 section#detailPopup div.detailInner div.use p strong{font-weight:600;}
 section#detailPopup div.detailInner div.use p i:before{content:'';display:inline-block;width:1px;height:10px;background:#eaeaea;margin:0 10px;}
 section#detailPopup div.detailInner div.use span{display:block;font-size:10px;color:#999;}
 section#detailPopup div.detailInner div.use span strong{font-weight:600;}
+
+/*  thumbPopup */
+section#thumbPopup{position:fixed;top:0;right:0;left:0;display:none;width:100%;height:100%;background:url('../images/bg.png');z-index:100;}
+section#thumbPopup div.thumbInner{position:absolute;top:80px;display:block;width:90%;margin-left:5%;background:#fff;border:1px solid #eaeaea;}
+section#thumbPopup div.thumbInner div{position:relative;}
+section#thumbPopup div.thumbInner div img{width:100%;height:auto;}
+section#thumbPopup div.thumbInner div p.close{position:absolute;top:5px;right:5px;display:inline-block;}
+section#thumbPopup div.thumbInner div p.close a{display:inline-block;width:40px;height:40px;background:url('../images/icon-popClose.png') no-repeat;text-indent:-9999px;background-size:40px;}
+section#thumbPopup div.thumbInner div div.control{position:absolute;top:calc(50% - 28.5px);display:block;width:100%;height:57px;}
+section#thumbPopup div.thumbInner div div.control a{position:absolute;float:left;display:inline-block;width:31px;height:57px;line-height:57px;background:#fff;text-indent:-9999px;}
+section#thumbPopup div.thumbInner div div.control a.prev{left:10px;background:url('../images/icon-slideNext.png') no-repeat center;
+-webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+section#thumbPopup div.thumbInner div div.control a.next{right:10px;background:url('../images/icon-slideNext.png') no-repeat center;}
 
 
 
@@ -233,7 +251,7 @@ header > h1 + a.prev{position:absolute;top:16px;left:13px;display:inline-block;w
 body.sub{background:#f4f7f8;text-align:center;}
 body.sub header{position:relative;width:100%;height:54px;background:#fff;}
 body.sub header a.menu{float:left;display:inline-block;width:53px;height:54px;background:url('../images/icon-menu.png') no-repeat center;background-size:27px 18px;text-indent:-9999px;}
-body.sub header h1{position:absolute;display:inline-block;top:calc(50% - 10px);left:calc(50% - 30px);font-size:20px;color:#333;}
+body.sub header h1{position:absolute;display:inline-block;top:calc(50% - 10px);left:calc(50% - 50px);font-size:20px;color:#333;}
 body.sub header h1 a{color:#333;}
 body.sub header h1 strong{font-weight:800;}
 body.sub header section.util-menu{position:absolute;top:0;right:13px;}
@@ -322,9 +340,16 @@ body.sub.storeList article.tab-content ul li div.imageArea{float:left;display:in
 body.sub.storeList article.tab-content ul li div.contentArea{float:left;display:inline-block;width:70%;height:107px;padding:20px;text-align:left;background:#fff;}
 body.sub.storeList article.tab-content ul li div.contentArea h3{font-size:16px;font-weight:600;color:#333;}
 body.sub.storeList article.tab-content ul li div.contentArea h3 small{display:inline-block;width:30px;height:17px;line-height:17px;font-size:11px;font-weight:600;color:#fff;background:#5a92e9;margin-left:5px;text-align:center;border-radius:25%;}
+body.sub.storeList article.tab-content ul li div.contentArea h3 u{float:right;display:inline-block;padding:5px;font-size:11px;font-weight:600;color:#fff;background:#5a92e9;text-align:center;text-decoration:none;border-radius:25%;}
 body.sub.storeList article.tab-content ul li div.contentArea p{display:inline-block;font-size:12px;color:#333;margin-top:15px;font-weight:600;}
 body.sub.storeList article.tab-content ul li div.contentArea p i:before{content:'';display:inline-block;width:1px;height:10px;background:#eaeaea;margin:0 10px;}
 body.sub.storeList article.tab-content ul li div.contentArea span{display:block;font-size:12px;color:#666;margin-top:10px;}
+
+/* 지금 시청대학로 */
+body.sub.notice article.contentDetail h2.title{display:inline-block;font-size:16px;font-weight:600;padding-top:20px;}
+body.sub.notice article.contentDetail div.thumbnail-slider{position:relative;width:100%;height:auto;margin:10px auto;white-space:nowrap;overflow-x:scroll;overflow-y:hidden;}
+body.sub.notice article.contentDetail div.thumbnail-slider div.slider-item{display:inline-block;width:calc(100% / 3 - 10px);height:120px;margin:0 7px 10px;overflow:hidden;border:none;}
+body.sub.notice article.contentDetail div.thumbnail-slider div.slider-item img{width:100%;height:auto;}
 
 body.sub.notice article.contentDetail div.noticeInner{display:block;width:90%;margin-left:5%;background:#fff;border:1px solid #eaeaea;}
 body.sub.notice article.contentDetail ul{display:block;width:100%;}

@@ -33,5 +33,19 @@ $(document).ready(function() {
 		$('.contentDetail div.tab-content').css('display', 'none');
 		$('div#'+ activeTab).css('display', 'block');
 	});
+	//이미지 상세팝업
+	$('section#thumbPopup div.thumbInner div img').css('height',$(document).height() - 240);
+	$('body.sub.notice article.contentDetail div.thumbnail-slider div.slider-item a').click(function(){
+		$('section#thumbPopup').show();
+	});
+
+	//이미지 상세팝업 닫기
+	$('section#thumbPopup div.thumbInner div p.close a').click(function(){
+		$('section#thumbPopup').hide();
+	});
+
+	$('body.sub.storeList article.tab-content ul li a').click(function(){
+		$('section#detailPopup').show();
+	});
 
 });
